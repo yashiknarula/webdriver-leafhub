@@ -81,7 +81,7 @@ public abstract class ExtentReporter extends DriverInstance {
 				snapNumber = takeSnap();
 				try {
 					img = MediaEntityBuilder
-							.createScreenCaptureFromPath("./../../" + folderName + "/images/" + snapNumber + ".jpg")
+							.createScreenCaptureFromPath("/images/" + snapNumber + ".jpg")
 							.build();
 				} catch (IOException e) {
 				}
