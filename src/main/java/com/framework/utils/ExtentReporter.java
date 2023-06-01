@@ -44,7 +44,7 @@ public abstract class ExtentReporter extends DriverInstance {
 		htmlReporter.config().setTheme(Theme.STANDARD);
 		htmlReporter.config().setDocumentTitle("Learner Hub");
 		htmlReporter.config().setEncoding("utf-8");
-		htmlReporter.config().setReportName("Leaftaps");
+		htmlReporter.config().setReportName("Selenium UI Automation");
 		htmlReporter.setAppendExisting(true);
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
