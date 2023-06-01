@@ -19,7 +19,15 @@ public class ProjectHooks extends SeleniumBase {
 	
 	@BeforeMethod
 	public void preCondition() {
-		startApp("chrome", true, ConfigurationManager.configuration().baseUrl());
+		String appUrl  = System.getProperty("server.ip");
+		if(appUrl == null) {
+			appUrl = ConfigurationManager.configuration().baseUrl();
+		} else {
+			appUrl = "http://"+appUrl+"/leaf";
+		}
+		System.out.println("Application URL: " +appUrl);
+		
+		startApp("chrome", true, appUrl);
 		setNode();
 	}
 	

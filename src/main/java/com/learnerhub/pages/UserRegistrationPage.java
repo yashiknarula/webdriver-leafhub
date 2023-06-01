@@ -11,9 +11,9 @@ public class UserRegistrationPage extends ProjectHooks{
 		return this;
 	}
 	
-	public UserRegistrationPage selectRole(String role) {
-		selectDropDownUsingText(locateElement(Locators.ID, "roleDropdown"), role);
-		reportStep(role+" selected successfully","pass");
+	public UserRegistrationPage selectRole() {
+		selectDropDownUsingIndex(locateElement(Locators.ID, "roleDropdown"), 1);
+		reportStep("Role is selected successfully","pass");
 		return this;
 	}
 	
@@ -45,9 +45,9 @@ public class UserRegistrationPage extends ProjectHooks{
 	}
 	
 
-	public UserRegistrationPage selectSecretQuestion(String question) {
-		selectDropDownUsingText(locateElement(Locators.ID, "secQuest"), question);
-		reportStep(question+" selected successfully","pass");
+	public UserRegistrationPage selectSecretQuestion() {
+		selectDropDownUsingIndex(locateElement(Locators.ID, "secQuest"), 2);
+		reportStep("Secret Question is selected successfully","pass");
 		return this;
 	}
 	

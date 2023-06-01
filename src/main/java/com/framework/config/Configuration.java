@@ -49,4 +49,7 @@ public interface Configuration extends Config {
 	@Key("app.password")
 	String appPassword();
 
+	 @Key("faker.locale")
+	 String faker();
+
 }

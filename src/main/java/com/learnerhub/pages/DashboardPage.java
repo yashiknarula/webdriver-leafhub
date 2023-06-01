@@ -12,7 +12,7 @@ public class DashboardPage extends ProjectHooks{
 	}
 	
 	public UserRegistrationPage clickRegister() {
-		click(locateElement(Locators.LINK_TEXT, " Register"));
+		click(locateElement(Locators.XPATH, " //a[@href='/leaf/dashboard/registration']"));
 		reportStep("Registration Link is clicked", "pass");
 		return new UserRegistrationPage();
 	}

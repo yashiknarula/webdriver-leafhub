@@ -27,8 +27,6 @@ public abstract class ExtentReporter extends DriverInstance {
 	private static final ThreadLocal<String> testName = new ThreadLocal<String>();
 	
 	private String fileName = "result.html";
-	private String pattern = "dd-MMM-yyyy HH-mm-ss";
-
 	public String testcaseName, testDescription, authors, category, dataFileName, dataFileType, excelFileName;
 	public static String folderName = "";
 
@@ -102,7 +100,7 @@ public abstract class ExtentReporter extends DriverInstance {
 		}
 		System.out.println(desc);
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 
 		}

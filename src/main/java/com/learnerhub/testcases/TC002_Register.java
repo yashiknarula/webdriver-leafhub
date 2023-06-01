@@ -4,6 +4,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.framework.testng.api.base.ProjectHooks;
+import com.framework.utils.FakerDataFactory;
 import com.learnerhub.pages.LoginPage;
 
 public class TC002_Register extends ProjectHooks{
@@ -17,25 +18,29 @@ public class TC002_Register extends ProjectHooks{
 	
 	@Test
 	public void runRegister() {
+		
+		String username = FakerDataFactory.getFirstName();
+		String password = "testleaf";
+		
 		new LoginPage()
 		.enterUsername()
 		.enterPassword()
 		.clickLogin()
 		.clickRegister()
-		.enterUsername("")
-		.selectRole("")
-		.enterName("")
-		.enterEmail("")
-		.enterPassword("")
-		.enterConfirmPassword("")
-		.selectSecretQuestion("")
-		.enterAnswer("")
+		.enterUsername(username)
+		.selectRole()
+		.enterName(username)
+		.enterEmail(FakerDataFactory.getEmailAddress())
+		.enterPassword(password)
+		.enterConfirmPassword(password)
+		.selectSecretQuestion()
+		.enterAnswer(password)
 		.clickRegister()
 		.clickLogout();
 		
 		new LoginPage()
-		.enterUsername("")
-		.enterPassword("")
+		.enterUsername(username)
+		.enterPassword(password)
 		.clickLogin()
 		.clickLogout();
 	}
