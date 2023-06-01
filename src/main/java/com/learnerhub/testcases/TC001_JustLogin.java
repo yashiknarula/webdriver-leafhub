@@ -13,7 +13,6 @@ public class TC001_JustLogin extends ProjectHooks{
 		testDescription ="Login to Learner Hub";
 		authors="Babu";
 		category ="Smoke";
-		excelFileName="Login";
 	}
 	
 	@Test

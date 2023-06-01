@@ -6,16 +6,24 @@ import com.framework.testng.api.base.ProjectHooks;
 
 public class LoginPage extends ProjectHooks{
 
-	public LoginPage enterUsername() {
-		clearAndType(locateElement(Locators.ID, "userNameTxt"), ConfigurationManager.configuration().appUserName());
+	public LoginPage enterUsername(String username) {
+		clearAndType(locateElement(Locators.ID, "userNameTxt"), username);
 		reportStep("Username entered successfully","pass");
 		return this;
 	}
 	
-	public LoginPage enterPassword() {
-		clearAndType(locateElement(Locators.ID, "password"),  ConfigurationManager.configuration().appPassword());
+	public LoginPage enterPassword(String password) {
+		clearAndType(locateElement(Locators.ID, "password"),  password);
 		reportStep("Password entered successfully","pass");
 		return this;
+	}
+	
+	public LoginPage enterUsername() {
+		return enterUsername(ConfigurationManager.configuration().appUserName());
+	}
+	
+	public LoginPage enterPassword() {
+		return enterPassword(ConfigurationManager.configuration().appPassword());
 	}
 	 
 	public DashboardPage clickLogin() {

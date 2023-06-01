@@ -2,8 +2,6 @@ package com.framework.utils;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import org.openqa.selenium.remote.UnreachableBrowserException;
 import org.testng.annotations.AfterMethod;
